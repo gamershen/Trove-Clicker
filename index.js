@@ -38,6 +38,7 @@ function getFlux() {
     /*----------Diamond Calculation----------*/
 
     let diamondChance = Math.floor(Math.random() * 100 + 1)
+
     if (diamondUpgrade == 0) {
         if (diamondChance == 1) {
             diamondCount++
@@ -45,7 +46,7 @@ function getFlux() {
         }
     }
     else {
-        if (diamondChance >= 1 && diamondChance <= 2) {
+        if (diamondChance == 1 || diamondChance == 2) {
             diamondCount++
             document.getElementById("diamond-amount").innerHTML = diamondCount;
         }
@@ -56,7 +57,7 @@ function getFlux() {
 
 
     /*----------CLICK REWARD----------*/
-    clickReward = Math.floor(clickSum / 100 * clickSum / 75 * totalFlux / 750)
+    clickReward = Math.floor(clickSum / 100 * clickSum / 75 + totalFlux / 10)
 
     if (clickSum % 1000 == 0) {
         alert("you clicked " + clickSum + " times! you get bonus " + clickReward + " flux")
@@ -109,7 +110,7 @@ function getFlux() {
 
     btnGamble.disabled = true;
 
-    if (diamondCount >= 5) {
+    if (diamondCount >= 50) {
         btnGamble.disabled = false;
     }
 }
@@ -156,6 +157,7 @@ function idle() {
     document.getElementById("flux-amount").innerHTML = fluxCount;
     fluxCount += idleCount;
     totalFlux++
+    document.getElementById("diamond-amount").innerHTML = diamondCount;
 
     /*----------IDLE BUTTON----------*/
     if (idleLevel == 0) {
@@ -196,7 +198,7 @@ function idle() {
 
     btnGamble.disabled = true;
 
-    if (diamondCount >= 5) {
+    if (diamondCount >= 50) {
         btnGamble.disabled = false;
     }
 }
@@ -248,8 +250,8 @@ if (fluxCount >= 20000) {
 function diamond() {
     document.getElementById("special2").style.visibility = "hidden";
     document.getElementById("special").style.visibility = "hidden";
-    document.getElementById("diamond-amount").innerHTML = diamondCount;
     diamondUpgrade++
+    document.getElementById("diamond-amount").innerHTML = diamondCount;
 
 }
 
@@ -263,10 +265,10 @@ function takeFluxDiamonds() {
 
 /*---------------------------------------------GAMBLING / TROVE OF WONDERS---------------------------------------------*/
 function gamble() {
-    diamondCount -= 5;
+    diamondCount -= 50;
     btnGamble.disabled = true;
 
-    if (diamondCount >= 1) {
+    if (diamondCount >= 50) {
         btnGamble.disabled = false;
     }
     document.getElementById("diamond-amount").innerHTML = diamondCount;
