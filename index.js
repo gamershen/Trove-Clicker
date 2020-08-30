@@ -57,13 +57,13 @@ function getFlux() {
     /*----------IDLE BUTTON----------*/
     if (idleLevel == 0) {
         btnIdle.disabled = true;
-        if (fluxCount >= 100) {
+        if (fluxCount >= 50) {
             btnIdle.disabled = false;
         }
     }
     if (idleLevel == 1) {
         btnIdle.disabled = true;
-        if (fluxCount > 1000) {
+        if (fluxCount > 500) {
             btnIdle.disabled = false;
         }
     }
@@ -71,13 +71,13 @@ function getFlux() {
     /*----------CLICK BUTTON----------*/
     if (clickLevel == 0) {
         btnClick.disabled = true;
-        if (fluxCount >= 50) {
+        if (fluxCount >= 20) {
             btnClick.disabled = false;
         }
     }
     if (clickLevel == 1) {
         btnClick.disabled = true;
-        if (fluxCount > 500) {
+        if (fluxCount > 250) {
             btnClick.disabled = false;
         }
     }
@@ -115,10 +115,10 @@ function Upgrade() {
 /*----------UPGRADE COST----------*/
 function takeFluxUpgrade() {
     if (clickLevel == 0) {
-        fluxCount -= 50;
+        fluxCount -= 20;
     }
     if (clickLevel == 1) {
-        fluxCount -= 500;
+        fluxCount -= 250;
     }
 }
 
@@ -145,13 +145,13 @@ function idle() {
     /*----------IDLE BUTTON----------*/
     if (idleLevel == 0) {
         btnIdle.disabled = true;
-        if (fluxCount >= 100) {
+        if (fluxCount >= 50) {
             btnIdle.disabled = false;
         }
     }
     if (idleLevel == 1) {
         btnIdle.disabled = true;
-        if (fluxCount > 1000) {
+        if (fluxCount > 500) {
             btnIdle.disabled = false;
         }
     }
@@ -159,13 +159,13 @@ function idle() {
     /*----------CLICK BUTTON----------*/
     if (clickLevel == 0) {
         btnClick.disabled = true;
-        if (fluxCount >= 50) {
+        if (fluxCount >= 20) {
             btnClick.disabled = false;
         }
     }
     if (clickLevel == 1) {
         btnClick.disabled = true;
-        if (fluxCount > 500) {
+        if (fluxCount > 250) {
             btnClick.disabled = false;
         }
     }
@@ -203,10 +203,10 @@ document.getElementById("idle").addEventListener("click", function () {
 /*----------IDLE COST----------*/
 function takeFluxIdle() {
     if (idleLevel == 0) {
-        fluxCount -= 100;
+        fluxCount -= 50;
     }
     if (idleLevel == 1) {
-        fluxCount -= 1000;
+        fluxCount -= 500;
     }
 }
 

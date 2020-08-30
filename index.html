@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>flux clicker</title>
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"> -->
+    <!--BOOTSTRAP LINK FUCK UP THE BOTTUNS -->
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -41,8 +44,11 @@
             <th>
                 <h3 class="h3-head">Gambling</h3>
             </th>
-            <th> <h3 id="special2" class="h3-head">Special</h3></th>
+            <th>
+                <h3 id="special2" class="h3-head">Special</h3>
+            </th>
         </tr>
+
         <tr>
             <td>
                 <button id="upgrade" class="btn" onclick="Upgrade(),takeFluxUpgrade(),clickUpgrade()">
@@ -63,11 +69,13 @@
                     <p id="idle-price" style="margin-top: -8px;">cost: 5 diamond</p>
                 </button>
             </td>
-            <td><button id="special" class="btn" onclick="diamond(),takeDiamond()">
+            <td>
+                <button id="special" class="btn" onclick="diamond(),takeDiamond()">
                     <h4>Easy Click</h4>
                     <p id="" style="margin-top: -15px;">Hold space to click</p>
                     <p id="" style="margin-top: -5px;">cost: 1000 diamond</p>
-                </button></td>
+                </button>
+            </td>
         </tr>
     </table>
 
