@@ -1,4 +1,5 @@
 let fluxCount = 0
+let totalFlux = 0
 
 let idleCount = 0
 let idleLevel = 0
@@ -10,6 +11,7 @@ let clickReward = 0
 
 var diamondCount = 0
 var idleDiamond = 1
+var diamondUpgrade = 0
 
 var btnIdle = document.querySelector('#idle');
 var btnClick = document.querySelector('#upgrade');
@@ -30,24 +32,36 @@ btnDiamond.disabled = true;
 
 function getFlux() {
     fluxCount += clickCount
+    totalFlux++
     clickSum++
 
     /*----------Diamond Calculation----------*/
 
     let diamondChance = Math.floor(Math.random() * 100 + 1)
-    if (diamondChance == 1) {
-        diamondCount++
-        document.getElementById("diamond-amount").innerHTML = diamondCount;
+    if (diamondUpgrade == 0) {
+        if (diamondChance == 1) {
+            diamondCount++
+            document.getElementById("diamond-amount").innerHTML = diamondCount;
+        }
+    }
+    else {
+        if (diamondChance >= 1 && diamondChance <= 2) {
+            diamondCount++
+            document.getElementById("diamond-amount").innerHTML = diamondCount;
+        }
     }
 
 
 
+
+
     /*----------CLICK REWARD----------*/
-    clickReward = Math.floor(clickSum / 100 * clickSum / 50)
+    clickReward = Math.floor(clickSum / 100 * clickSum / 75 * totalFlux / 750)
 
     if (clickSum % 1000 == 0) {
         alert("you clicked " + clickSum + " times! you get bonus " + clickReward + " flux")
         fluxCount += clickReward
+        totalFlux += clickReward
     }
 
 
@@ -83,7 +97,7 @@ function getFlux() {
     }
 
     /*----------SPECIAL BUTTON----------*/
-    if (diamondCount >= 1000) {
+    if (fluxCount >= 20000) {
         btnDiamond.disabled = false;
     }
 
@@ -141,6 +155,7 @@ function clickUpgrade() {
 function idle() {
     document.getElementById("flux-amount").innerHTML = fluxCount;
     fluxCount += idleCount;
+    totalFlux++
 
     /*----------IDLE BUTTON----------*/
     if (idleLevel == 0) {
@@ -172,7 +187,7 @@ function idle() {
 
 
     /*----------SPECIAL BUTTON----------*/
-    if (diamondCount >= 1000) {
+    if (fluxCount >= 20000) {
         btnGamble.disabled = false;
     }
 
@@ -234,17 +249,14 @@ function diamond() {
     document.getElementById("special2").style.visibility = "hidden";
     document.getElementById("special").style.visibility = "hidden";
     document.getElementById("diamond-amount").innerHTML = diamondCount;
-    $(document).keydown(function () {
-        if (event.key == " ") {
-            getFlux()
-        }
-    })
+    diamondUpgrade++
+
 }
 
-function takeDiamond() {
+function takeFluxDiamonds() {
     btnDiamond.disabled = true;
-    diamondCount -= 1000
-    document.getElementById("diamond-amount").innerHTML = diamondCount;
+    fluxCount -= 20000
+    document.getElementById("diamond-amount").innerHTML = fluxCount;
 }
 
 
@@ -269,6 +281,7 @@ function gamble() {
     else if (chance >= 2 && chance <= 101) {
         alert("YOU WON 5,000 FLUX")
         fluxCount += 5000
+        totalFlux += 5000
     }
 
     else {
