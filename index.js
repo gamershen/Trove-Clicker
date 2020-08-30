@@ -182,7 +182,7 @@ function idle() {
     btnGamble.disabled = true;
 
     if (diamondCount >= 5) {
-        btnDiamond.disabled = false;
+        btnGamble.disabled = false;
     }
 }
 
