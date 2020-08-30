@@ -188,7 +188,7 @@ function idle() {
 
     /*----------SPECIAL BUTTON----------*/
     if (fluxCount >= 20000) {
-        btnGamble.disabled = false;
+        btnDiamond.disabled = false;
     }
 
 
@@ -240,7 +240,7 @@ function idleUpgrade() {
 
 btnDiamond.disabled = true;
 
-if (diamondCount >= 1000) {
+if (fluxCount >= 20000) {
     btnDiamond.disabled = false;
 }
 
