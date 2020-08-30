@@ -43,10 +43,10 @@ function getFlux() {
 
 
     /*----------CLICK REWARD----------*/
-    clickReward = clickSum / 2
+    clickReward = Math.floor(clickSum / 100 * clickSum / 50)
 
-    if (clickSum === 1000) {
-        alert("you clicked 1000 times! you get bonus " + clickReward + " flux")
+    if (clickSum % 1000 == 0) {
+        alert("you clicked " + clickSum + " times! you get bonus " + clickReward + " flux")
         fluxCount += clickReward
     }
 
