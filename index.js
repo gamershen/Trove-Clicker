@@ -128,7 +128,7 @@ function clickUpgrade() {
     btnClick.disabled = true;
     document.getElementById("click-heading").innerHTML = "Mine Cinnabar";
     document.getElementById("click-reward").innerHTML = "+5 flux/click";
-    document.getElementById("click-price").innerHTML = "cost: 500 flux";
+    document.getElementById("click-price").innerHTML = "cost: 250 flux";
 
 }
 
@@ -215,7 +215,7 @@ function idleUpgrade() {
     idleLevel++
     btnIdle.disabled = true;
     document.getElementById("idle-reward").innerHTML = "5 flux/sec";
-    document.getElementById("idle-price").innerHTML = "cost: 1000 flux";
+    document.getElementById("idle-price").innerHTML = "cost: 500 flux";
 
 }
 
