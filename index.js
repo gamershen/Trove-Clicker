@@ -243,7 +243,7 @@ function diamond() {
 
 function takeDiamond() {
     btnDiamond.disabled = true;
-    diamondCount -= 100
+    diamondCount -= 1000
     document.getElementById("diamond-amount").innerHTML = diamondCount;
 }
 
