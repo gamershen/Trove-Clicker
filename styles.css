@@ -1,0 +1,62 @@
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 50px;
+  color: white;
+  text-align: center;
+  padding-top: 20px;
+}
+
+h2 {
+  color: white;
+  font-size: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h3 {
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.top-div {
+  background-color: blue;
+  margin: -35px -8px 0;
+  height: 200px;
+}
+
+.table-top {
+  position: relative;
+  margin-left: 820px;
+  margin-top: -20px;
+}
+
+.flux-img-amount {
+  width: 85px;
+}
+
+.diamond-img {
+  margin-left: 50px;
+  width: 55px;
+}
+
+.btn {
+  width: 130px;
+  height: 80px;
+}
+
+.table-buttons {
+  margin: -10px;
+}
+
+.btn-p {
+  margin-top: -17px;
+}
+
+.flux-img {
+  position: relative;
+  width: 550px;
+  margin: -20px 0 0 690px;
+}
+
+#special {
+  width: 141px;
+}

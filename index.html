@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flux clicker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="top-div">
+        <h1>TROVE CLICKER</h1>
+        <table cellspacing="10" class="table-top">
+            <tr>
+                <td><img class="flux-img-amount"
+                        src="https://vignette.wikia.nocookie.net/trove/images/d/db/Flux.png/revision/latest/scale-to-width-down/340?cb=20161005140728"
+                        alt=""></td>
+                <td>
+                    <h2 id="flux-amount">0</h2>
+                </td>
+                <td><img class="diamond-img"
+                        src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/237/gem-stone_1f48e.png">
+                </td>
+                <td>
+                    <h2 id="diamond-amount">0</h2>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+
+    <table cellspacing="20" class="table-buttons">
+        <tr>
+            <th>
+                <h3 class="h3-head">Upgrade click</h3>
+            </th>
+            <th>
+                <h3 class="h3-head">Upgrade Idle</h3>
+            </th>
+            <th>
+                <h3 class="h3-head">Gambling</h3>
+            </th>
+            <th> <h3 id="special2" class="h3-head">Special</h3></th>
+        </tr>
+        <tr>
+            <td>
+                <button id="upgrade" class="btn" onclick="Upgrade(),takeFluxUpgrade(),clickUpgrade()">
+                    <h4 id="click-heading">Mine Shapestone</h4>
+                    <p id="click-reward" class="btn-p">+1 flux/click</p>
+                    <p id="click-price" style="margin-top: -5px;">cost: 50 flux</p>
+                </button>
+            </td>
+            <td>
+                <button id="idle" class="btn" onclick="idle(),takeFluxIdle(),idleUpgrade()">
+                    <h4>Fishing Bot</h4>
+                    <p id="idle-reward" class="btn-p">1 flux/sec</p>
+                    <p id="idle-price" style="margin-top: -5px;">cost: 100 flux</p>
+                </button>
+            </td>
+            <td> <button id="gamble" class="btn" onclick="gamble()">
+                    <h4>Trove Of Wonders</h4>
+                    <p id="idle-price" style="margin-top: -8px;">cost: 5 diamond</p>
+                </button>
+            </td>
+            <td><button id="special" class="btn" onclick="diamond(),takeDiamond()">
+                    <h4>Diamond Generator</h4>
+                    <p id="" style="margin-top: -15px;">Hold space to click</p>
+                    <p id="" style="margin-top: -5px;">cost: 100 diamond</p>
+                </button></td>
+        </tr>
+    </table>
+
+
+    <div>
+        <img onclick="getFlux()" class="flux-img"
+            src="https://vignette.wikia.nocookie.net/trove/images/d/db/Flux.png/revision/latest/scale-to-width-down/340?cb=20161005140728"
+            alt="">
+    </div>
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="index.js">
+</script>
+
+
+</html>
