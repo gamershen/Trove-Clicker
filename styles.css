@@ -60,3 +60,89 @@ h3 {
 #special {
   width: 141px;
 }
+
+
+
+
+@media screen and (max-width: 755px) {
+
+  .table-top {
+    position: relative;
+    margin-left: 85px;
+    margin-top: -20px;
+  }
+
+  .flux-img {
+    position: relative;
+    width: 550px;
+    margin: -20px 0 0 -30px;
+  }
+
+  #upgrade {
+    position: absolute;
+    top: 833px;
+    left: 25px;
+    width: 80px;
+    height: 70px;
+    font-size: 10px;
+  }
+
+  .h3-head-click {
+    position: absolute;
+    font-size: 12px;
+    top: 790px;
+    left: 25px;
+  }
+
+  #idle {
+    position: absolute;
+    top: 833px;
+    left: 140px;
+    width: 80px;
+    height: 70px;
+    font-size: 10px;
+  }
+
+  .h3-head-idle {
+    position: absolute;
+    font-size: 12px;
+    top: 790px;
+    left: 142px;
+  }
+
+  #gamble {
+    position: absolute;
+    top: 833px;
+    left: 255px;
+    width: 80px;
+    height: 70px;
+    font-size: 10px;
+  }
+
+  .h3-head-gamble {
+    position: absolute;
+    font-size: 12px;
+    top: 790px;
+    left: 260px;
+  }
+
+  #special {
+    position: absolute;
+    top: 833px;
+    left: 370px;
+    width: 80px;
+    height: 70px;
+    font-size: 9px;
+  }
+
+  .h3-head-special {
+    position: absolute;
+    font-size: 12px;
+    top: 790px;
+    left: 385px;
+  }
+
+  .btn-p {
+    margin-top: -12px;
+  }
+}
