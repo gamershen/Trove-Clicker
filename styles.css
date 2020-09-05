@@ -1,6 +1,12 @@
+:root {
+  --main-buttons-margin: 400px;
+}
+
+
+
 h1 {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 50px;
+  font-size: 40px;
   color: white;
   text-align: center;
   padding-top: 20px;
@@ -72,26 +78,26 @@ h3 {
   .top-div {
     background-color: blue;
     margin: -35px -8px 0;
-    height: 200px;
+    height: 130px;
   }
 
   .table-top {
     position: relative;
-    margin-left: 60px;
+    margin-left: 40px;
     margin-top: -60px;
   }
 
   .flux-img {
     position: relative;
-    width: 350px;
-    margin: -30px 0 0 40px;
+    width: 300px;
+    margin: -50px 0 0 40px;
   }
 
   #upgrade {
     position: absolute;
-    top: 745px;
-    left: 25px;
-    width: 80px;
+    top: var(--main-buttons-margin);
+    left: 5px;
+    width: 70px;
     height: 70px;
     font-size: 10px;
     border-radius: 0%;
@@ -100,15 +106,15 @@ h3 {
   .h3-head-click {
     position: absolute;
     font-size: 12px;
-    top: 710px;
-    left: 25px;
+    top: 370px;
+    left: 5px;
   }
 
   #idle {
     position: absolute;
-    top: 745px;
-    left: 140px;
-    width: 80px;
+    top: var(--main-buttons-margin);
+    left: 90px;
+    width: 70px;
     height: 70px;
     font-size: 10px;
     border-radius: 0%;
@@ -117,15 +123,15 @@ h3 {
   .h3-head-idle {
     position: absolute;
     font-size: 12px;
-    top: 710px;
-    left: 142px;
+    top: 370px;
+    left: 90px;
   }
 
   #gamble {
     position: absolute;
-    top: 745px;
-    left: 255px;
-    width: 80px;
+    top: var(--main-buttons-margin);
+    left: 175px;
+    width: 70px;
     height: 70px;
     font-size: 10px;
     border-radius: 0%;
@@ -134,15 +140,15 @@ h3 {
   .h3-head-gamble {
     position: absolute;
     font-size: 12px;
-    top: 710px;
-    left: 260px;
+    top: 370px;
+    left: 180px;
   }
 
   #special {
     position: absolute;
-    top: 745px;
-    left: 370px;
-    width: 80px;
+    top: var(--main-buttons-margin);
+    left: 260px;
+    width: 75px;
     height: 70px;
     font-size: 9px;
     border-radius: 0%;
@@ -151,8 +157,8 @@ h3 {
   .h3-head-special {
     position: absolute;
     font-size: 12px;
-    top: 710px;
-    left: 385px;
+    top: 370px;
+    left: 272px;
   }
 
   .btn-p {
