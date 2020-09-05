@@ -23,6 +23,7 @@ h3 {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+
 .top-div {
   background-color: blue;
   margin: -35px -8px 0;
@@ -71,6 +72,31 @@ h3 {
 
 
 @media screen and (max-width: 755px) {
+  h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+  }
+
+  .flux-img-amount {
+    width: 55px;
+  }
+
+  #flux-amount{
+    font-size: 25px;
+  }
+
+  .diamond-img {
+    margin-left: 50px;
+    width: 35px;
+  }
+
+  #diamond-amount{
+    font-size: 25px;
+  }
+
   .img-div {
     width: 40px;
   }
@@ -83,29 +109,28 @@ h3 {
 
   .table-top {
     position: relative;
-    margin-left: 40px;
-    margin-top: -60px;
+    margin-left: 20px;
+    margin-top: -30px;
   }
 
   .flux-img {
     position: relative;
-    width: 300px;
-    margin: -50px 0 0 40px;
+    width: 275px;
+    margin: -50px 0 0 15px;
   }
 
   #upgrade {
     position: absolute;
     top: var(--main-buttons-margin);
     left: 5px;
-    width: 70px;
+    width: 60px;
     height: 70px;
-    font-size: 10px;
-    border-radius: 0%;
+    font-size: 8px;
   }
 
   .h3-head-click {
     position: absolute;
-    font-size: 12px;
+    font-size: 10px;
     top: 370px;
     left: 5px;
   }
@@ -113,52 +138,49 @@ h3 {
   #idle {
     position: absolute;
     top: var(--main-buttons-margin);
-    left: 90px;
-    width: 70px;
+    left: 70px;
+    width: 60px;
     height: 70px;
-    font-size: 10px;
-    border-radius: 0%;
+    font-size: 8px;
   }
 
   .h3-head-idle {
     position: absolute;
-    font-size: 12px;
+    font-size: 10px;
     top: 370px;
-    left: 90px;
+    left: 75px;
   }
 
   #gamble {
     position: absolute;
     top: var(--main-buttons-margin);
-    left: 175px;
-    width: 70px;
+    left: 135px;
+    width: 60px;
     height: 70px;
-    font-size: 10px;
-    border-radius: 0%;
+    font-size: 8px;
   }
 
   .h3-head-gamble {
     position: absolute;
-    font-size: 12px;
+    font-size: 10px;
     top: 370px;
-    left: 180px;
+    left: 140px;
   }
 
   #special {
     position: absolute;
     top: var(--main-buttons-margin);
-    left: 260px;
-    width: 75px;
+    left: 200px;
+    width: 65px;
     height: 70px;
-    font-size: 9px;
-    border-radius: 0%;
+    font-size: 8px;
   }
 
   .h3-head-special {
     position: absolute;
-    font-size: 12px;
+    font-size: 10px;
     top: 370px;
-    left: 272px;
+    left: 210px;
   }
 
   .btn-p {

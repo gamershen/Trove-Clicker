@@ -17,12 +17,11 @@ var btnIdle = document.querySelector('#idle');
 var btnClick = document.querySelector('#upgrade');
 var btnGamble = document.querySelector('#gamble');
 var btnDiamond = document.querySelector('#special');
-
+var fluxImg = document.querySelector(".flux-img")
 btnGamble.disabled = true;
 btnIdle.disabled = true;
 btnClick.disabled = true;
 btnDiamond.disabled = true;
-
 
 
 
@@ -35,6 +34,8 @@ function getFlux() {
     totalFlux++
     clickSum++
 
+    document.getElementById("diamond-amount").innerHTML = diamondCount;
+
     /*----------Diamond Calculation----------*/
 
     let diamondChance = Math.floor(Math.random() * 100 + 1)
@@ -46,7 +47,7 @@ function getFlux() {
         }
     }
     else {
-        if (diamondChance == 1 || diamondChance == 2) {
+        if (diamondChance <= 2) {
             diamondCount++
             document.getElementById("diamond-amount").innerHTML = diamondCount;
         }
@@ -113,6 +114,7 @@ function getFlux() {
     if (diamondCount >= 50) {
         btnGamble.disabled = false;
     }
+
 }
 
 
@@ -141,6 +143,7 @@ function takeFluxUpgrade() {
 function clickUpgrade() {
     clickLevel++
     btnClick.disabled = true;
+    document.getElementById("flux-amount").innerHTML = fluxCount;
     document.getElementById("click-heading").innerHTML = "Mine Cinnabar";
     document.getElementById("click-reward").innerHTML = "+5 flux/click";
     document.getElementById("click-price").innerHTML = "cost: 250 flux";
@@ -251,13 +254,13 @@ function diamond() {
     document.getElementById("special2").style.visibility = "hidden";
     document.getElementById("special").style.visibility = "hidden";
     diamondUpgrade++
-    document.getElementById("diamond-amount").innerHTML = diamondCount;
 
 }
 
 function takeFluxDiamonds() {
     btnDiamond.disabled = true;
     fluxCount -= 20000
+    document.getElementById("diamond-amount").innerHTML = diamondCount;
     document.getElementById("diamond-amount").innerHTML = fluxCount;
 }
 
