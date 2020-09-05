@@ -66,21 +66,28 @@ h3 {
 
 @media screen and (max-width: 755px) {
 
+
+  .top-div {
+    background-color: blue;
+    margin: -35px -15px 0;
+    height: 200px;
+  }
+
   .table-top {
     position: relative;
-    margin-left: 85px;
-    margin-top: -20px;
+    margin-left: 125px;
+    margin-top: -50px;
   }
 
   .flux-img {
     position: relative;
     width: 550px;
-    margin: -20px 0 0 -30px;
+    margin: -30px 0 0 -30px;
   }
 
   #upgrade {
     position: absolute;
-    top: 833px;
+    top: 810px;
     left: 25px;
     width: 80px;
     height: 70px;
@@ -90,13 +97,13 @@ h3 {
   .h3-head-click {
     position: absolute;
     font-size: 12px;
-    top: 790px;
+    top: 780px;
     left: 25px;
   }
 
   #idle {
     position: absolute;
-    top: 833px;
+    top: 810px;
     left: 140px;
     width: 80px;
     height: 70px;
@@ -106,13 +113,13 @@ h3 {
   .h3-head-idle {
     position: absolute;
     font-size: 12px;
-    top: 790px;
+    top: 780px;
     left: 142px;
   }
 
   #gamble {
     position: absolute;
-    top: 833px;
+    top: 810px;
     left: 255px;
     width: 80px;
     height: 70px;
@@ -122,13 +129,13 @@ h3 {
   .h3-head-gamble {
     position: absolute;
     font-size: 12px;
-    top: 790px;
+    top: 780px;
     left: 260px;
   }
 
   #special {
     position: absolute;
-    top: 833px;
+    top: 810px;
     left: 370px;
     width: 80px;
     height: 70px;
@@ -138,7 +145,7 @@ h3 {
   .h3-head-special {
     position: absolute;
     font-size: 12px;
-    top: 790px;
+    top: 780px;
     left: 385px;
   }
 
