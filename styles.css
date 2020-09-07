@@ -1,6 +1,6 @@
 :root {
-  --main-buttons-margin: 460px;
-  --main-title-margin: 433px;
+  --main-buttons-margin: 400px;
+  --main-title-margin: 375px;
 }
 
 
@@ -106,7 +106,7 @@ h3 {
     background-color: blue;
     margin: -35px -8px 0;
     height: 130px;
-    width: 345px;
+    width: 305px;
   }
 
   .table-top {
@@ -124,7 +124,7 @@ h3 {
   #upgrade {
     position: absolute;
     top: var(--main-buttons-margin);
-    left: 15px;
+    left: 22px;
     width: 60px;
     height: 70px;
     font-size: 8px;
@@ -134,13 +134,13 @@ h3 {
     position: absolute;
     font-size: 10px;
     top: var(--main-title-margin);
-    left: 10px;
+    left: 20px;
   }
 
   #idle {
     position: absolute;
     top: var(--main-buttons-margin);
-    left: 95px;
+    left: 100px;
     width: 60px;
     height: 70px;
     font-size: 8px;
@@ -150,7 +150,7 @@ h3 {
     position: absolute;
     font-size: 10px;
     top: var(--main-title-margin);
-    left: 90px;
+    left: 100px;
   }
 
   #gamble {
@@ -172,7 +172,7 @@ h3 {
   #special {
     position: absolute;
     top: var(--main-buttons-margin);
-    left: 260px;
+    left: 255px;
     width: 65px;
     height: 70px;
     font-size: 8px;
