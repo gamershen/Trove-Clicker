@@ -1,6 +1,6 @@
 :root {
-  --main-buttons-margin: 400px;
-  --main-title-margin: 375px;
+  --main-buttons-margin: 430px;
+  --main-title-margin: 405px;
 }
 
 
@@ -111,14 +111,14 @@ h3 {
 
   .table-top {
     position: relative;
-    margin-left: 40px;
+    margin-left: 60px;
     margin-top: -30px;
   }
 
   .flux-img {
     position: relative;
     width: 300px;
-    margin: -50px 0 0 15px;
+    margin: -50px 0 0 45px;
   }
 
   #upgrade {
@@ -140,7 +140,7 @@ h3 {
   #idle {
     position: absolute;
     top: var(--main-buttons-margin);
-    left: 100px;
+    left: 115px;
     width: 60px;
     height: 70px;
     font-size: 8px;
@@ -150,13 +150,13 @@ h3 {
     position: absolute;
     font-size: 10px;
     top: var(--main-title-margin);
-    left: 100px;
+    left: 115px;
   }
 
   #gamble {
     position: absolute;
     top: var(--main-buttons-margin);
-    left: 180px;
+    left: 200px;
     width: 60px;
     height: 70px;
     font-size: 8px;
@@ -166,13 +166,13 @@ h3 {
     position: absolute;
     font-size: 10px;
     top: var(--main-title-margin);
-    left: 185px;
+    left: 205px;
   }
 
   #special {
     position: absolute;
     top: var(--main-buttons-margin);
-    left: 255px;
+    left: 290px;
     width: 65px;
     height: 70px;
     font-size: 8px;
@@ -182,7 +182,7 @@ h3 {
     position: absolute;
     font-size: 10px;
     top: var(--main-title-margin);
-    left: 270px;
+    left: 300px;
   }
 
   .btn-p {
