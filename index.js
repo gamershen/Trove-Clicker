@@ -18,6 +18,7 @@ var btnClick = document.querySelector('#upgrade');
 var btnGamble = document.querySelector('#gamble');
 var btnDiamond = document.querySelector('#special');
 var fluxImg = document.querySelector(".flux-img")
+
 btnGamble.disabled = true;
 btnIdle.disabled = true;
 btnClick.disabled = true;

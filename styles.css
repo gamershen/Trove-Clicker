@@ -1,5 +1,6 @@
 :root {
-  --main-buttons-margin: 400px;
+  --main-buttons-margin: 450px;
+  --main-title-margin: 423px;
 }
 
 
@@ -84,7 +85,7 @@ h3 {
     width: 55px;
   }
 
-  #flux-amount{
+  #flux-amount {
     font-size: 25px;
   }
 
@@ -93,7 +94,7 @@ h3 {
     width: 30px;
   }
 
-  #diamond-amount{
+  #diamond-amount {
     font-size: 25px;
   }
 
@@ -105,7 +106,7 @@ h3 {
     background-color: blue;
     margin: -35px -8px 0;
     height: 130px;
-    width: 265px;
+    width: 330px;
   }
 
   .table-top {
@@ -123,7 +124,7 @@ h3 {
   #upgrade {
     position: absolute;
     top: var(--main-buttons-margin);
-    left: 5px;
+    left: 15px;
     width: 60px;
     height: 70px;
     font-size: 8px;
@@ -132,14 +133,14 @@ h3 {
   .h3-head-click {
     position: absolute;
     font-size: 10px;
-    top: 370px;
-    left: 5px;
+    top: var(--main-title-margin);
+    left: 10px;
   }
 
   #idle {
     position: absolute;
     top: var(--main-buttons-margin);
-    left: 70px;
+    left: 95px;
     width: 60px;
     height: 70px;
     font-size: 8px;
@@ -148,14 +149,14 @@ h3 {
   .h3-head-idle {
     position: absolute;
     font-size: 10px;
-    top: 370px;
-    left: 75px;
+    top: var(--main-title-margin);
+    left: 90px;
   }
 
   #gamble {
     position: absolute;
     top: var(--main-buttons-margin);
-    left: 135px;
+    left: 180px;
     width: 60px;
     height: 70px;
     font-size: 8px;
@@ -164,14 +165,14 @@ h3 {
   .h3-head-gamble {
     position: absolute;
     font-size: 10px;
-    top: 370px;
-    left: 145px;
+    top: var(--main-title-margin);
+    left: 185px;
   }
 
   #special {
     position: absolute;
     top: var(--main-buttons-margin);
-    left: 200px;
+    left: 260px;
     width: 65px;
     height: 70px;
     font-size: 8px;
@@ -180,8 +181,8 @@ h3 {
   .h3-head-special {
     position: absolute;
     font-size: 10px;
-    top: 370px;
-    left: 212px;
+    top: var(--main-title-margin);
+    left: 270px;
   }
 
   .btn-p {
