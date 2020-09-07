@@ -111,14 +111,14 @@ h3 {
 
   .table-top {
     position: relative;
-    margin-left: 60px;
+    margin-left: 65px;
     margin-top: -30px;
   }
 
   .flux-img {
     position: relative;
-    width: 320px;
-    margin: -50px 0 0 30px;
+    width: 350px;
+    margin: -30px 0 0 15px;
   }
 
   #upgrade {
