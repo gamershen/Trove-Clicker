@@ -112,7 +112,7 @@ function getFlux() {
 
     btnGamble.disabled = true;
 
-    if (diamondCount >= 50) {
+    if (diamondCount >= 10) {
         btnGamble.disabled = false;
     }
 
@@ -202,7 +202,7 @@ function idle() {
 
     btnGamble.disabled = true;
 
-    if (diamondCount >= 50) {
+    if (diamondCount >= 10) {
         btnGamble.disabled = false;
     }
 }
@@ -269,10 +269,10 @@ function takeFluxDiamonds() {
 
 /*---------------------------------------------GAMBLING / TROVE OF WONDERS---------------------------------------------*/
 function gamble() {
-    diamondCount -= 50;
+    diamondCount -= 10;
     btnGamble.disabled = true;
 
-    if (diamondCount >= 50) {
+    if (diamondCount >= 10) {
         btnGamble.disabled = false;
     }
     document.getElementById("diamond-amount").innerHTML = diamondCount;
