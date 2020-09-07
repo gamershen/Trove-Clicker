@@ -1,6 +1,6 @@
 :root {
-  --main-buttons-margin: 430px;
-  --main-title-margin: 405px;
+  --main-buttons-margin: 667px;
+  --main-title-margin: 640px;
 }
 
 
@@ -105,7 +105,7 @@ h3 {
   .top-div {
     background-color: blue;
     margin: -35px -8px 0;
-    height: 130px;
+    height: 110px;
     width: 375px;
   }
 
@@ -117,8 +117,8 @@ h3 {
 
   .flux-img {
     position: relative;
-    width: 300px;
-    margin: -50px 0 0 45px;
+    width: 320px;
+    margin: -50px 0 0 30px;
   }
 
   #upgrade {

@@ -220,7 +220,6 @@ document.getElementById("idle").addEventListener("click", function () {
 
 
 
-
 /*----------IDLE COST----------*/
 function takeFluxIdle() {
     if (idleLevel == 0) {
