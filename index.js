@@ -13,11 +13,20 @@ var diamondCount = 0
 var idleDiamond = 1
 var diamondUpgrade = 0
 
-var btnIdle = document.querySelector('#idle');
-var btnClick = document.querySelector('#upgrade');
-var btnGamble = document.querySelector('#gamble');
-var btnDiamond = document.querySelector('#special');
-var fluxImg = document.querySelector(".flux-img")
+/*----------PRICES----------*/
+const gamblePrice = 10
+const clickUpgrade1 = 20
+const clickUpgrade2 = 250
+const idleUpgrade1 = 50
+const idleUpgrade2 = 500
+const specialUpgrade = 20000
+
+/*----------BUTTONS----------*/
+const btnIdle = document.querySelector('#idle');
+const btnClick = document.querySelector('#upgrade');
+const btnGamble = document.querySelector('#gamble');
+const btnDiamond = document.querySelector('#special');
+const fluxImg = document.querySelector(".flux-img")
 
 btnGamble.disabled = true;
 btnIdle.disabled = true;
@@ -38,8 +47,7 @@ function getFlux() {
     document.getElementById("diamond-amount").innerHTML = diamondCount;
 
     /*----------Diamond Calculation----------*/
-
-    let diamondChance = Math.floor(Math.random() * 100 + 1)
+    let diamondChance = Math.floor(Math.random() * 150 + 1)
 
     if (diamondUpgrade == 0) {
         if (diamondChance == 1) {
@@ -47,15 +55,6 @@ function getFlux() {
             document.getElementById("diamond-amount").innerHTML = diamondCount;
         }
     }
-    else {
-        if (diamondChance <= 2) {
-            diamondCount++
-            document.getElementById("diamond-amount").innerHTML = diamondCount;
-        }
-    }
-
-
-
 
 
     /*----------CLICK REWARD----------*/
@@ -63,24 +62,22 @@ function getFlux() {
 
     if (clickSum % 1000 == 0) {
         alert("you clicked " + clickSum + " times! you get bonus " + clickReward + " flux")
-        fluxCount += clickReward
-        totalFlux += clickReward
+        fluxCount += clickReward // reward the flux earned
+        totalFlux += clickReward // keeps track of total flux earned
     }
-
-
 
     document.getElementById("flux-amount").innerHTML = fluxCount; // refresh flux amount
 
     /*----------IDLE BUTTON----------*/
     if (idleLevel == 0) {
         btnIdle.disabled = true;
-        if (fluxCount >= 50) {
+        if (fluxCount >= idleUpgrade1) {
             btnIdle.disabled = false;
         }
     }
     if (idleLevel == 1) {
         btnIdle.disabled = true;
-        if (fluxCount > 500) {
+        if (fluxCount > idleUpgrade2) {
             btnIdle.disabled = false;
         }
     }
@@ -88,19 +85,19 @@ function getFlux() {
     /*----------CLICK BUTTON----------*/
     if (clickLevel == 0) {
         btnClick.disabled = true;
-        if (fluxCount >= 20) {
+        if (fluxCount >= clickUpgrade1) {
             btnClick.disabled = false;
         }
     }
     if (clickLevel == 1) {
         btnClick.disabled = true;
-        if (fluxCount > 250) {
+        if (fluxCount > clickUpgrade2) {
             btnClick.disabled = false;
         }
     }
 
     /*----------SPECIAL BUTTON----------*/
-    if (fluxCount >= 20000) {
+    if (fluxCount >= specialUpgrade) {
         btnDiamond.disabled = false;
     }
 
@@ -133,10 +130,10 @@ function Upgrade() {
 /*----------UPGRADE COST----------*/
 function takeFluxUpgrade() {
     if (clickLevel == 0) {
-        fluxCount -= 20;
+        fluxCount -= clickUpgrade1;
     }
     if (clickLevel == 1) {
-        fluxCount -= 250;
+        fluxCount -= clickUpgrade2;
     }
 }
 
@@ -166,13 +163,13 @@ function idle() {
     /*----------IDLE BUTTON----------*/
     if (idleLevel == 0) {
         btnIdle.disabled = true;
-        if (fluxCount >= 50) {
+        if (fluxCount >= idleUpgrade1) {
             btnIdle.disabled = false;
         }
     }
     if (idleLevel == 1) {
         btnIdle.disabled = true;
-        if (fluxCount > 500) {
+        if (fluxCount > idleUpgrade2) {
             btnIdle.disabled = false;
         }
     }
@@ -180,20 +177,20 @@ function idle() {
     /*----------CLICK BUTTON----------*/
     if (clickLevel == 0) {
         btnClick.disabled = true;
-        if (fluxCount >= 20) {
+        if (fluxCount >= clickUpgrade1) {
             btnClick.disabled = false;
         }
     }
     if (clickLevel == 1) {
         btnClick.disabled = true;
-        if (fluxCount > 250) {
+        if (fluxCount > clickUpgrade2) {
             btnClick.disabled = false;
         }
     }
 
 
     /*----------SPECIAL BUTTON----------*/
-    if (fluxCount >= 20000) {
+    if (fluxCount >= specialUpgrade) {
         btnDiamond.disabled = false;
     }
 
@@ -202,7 +199,7 @@ function idle() {
 
     btnGamble.disabled = true;
 
-    if (diamondCount >= 10) {
+    if (diamondCount >= gamblePrice) {
         btnGamble.disabled = false;
     }
 }
@@ -223,10 +220,10 @@ document.getElementById("idle").addEventListener("click", function () {
 /*----------IDLE COST----------*/
 function takeFluxIdle() {
     if (idleLevel == 0) {
-        fluxCount -= 50;
+        fluxCount -= idleUpgrade1;
     }
     if (idleLevel == 1) {
-        fluxCount -= 500;
+        fluxCount -= idleUpgrade2;
     }
 }
 
@@ -245,51 +242,57 @@ function idleUpgrade() {
 
 btnDiamond.disabled = true;
 
-if (fluxCount >= 20000) {
+if (fluxCount >= specialUpgrade) {
     btnDiamond.disabled = false;
 }
 
+
+function addDiamond() {
+    diamondCount += idleDiamond
+    document.getElementById("diamond-amount").innerHTML = diamondCount;
+}
 
 function diamond() {
     document.getElementById("special2").style.visibility = "hidden";
     document.getElementById("special").style.visibility = "hidden";
     diamondUpgrade++
-
 }
 
 function takeFluxDiamonds() {
     btnDiamond.disabled = true;
-    fluxCount -= 20000
+    fluxCount -= specialUpgrade
     document.getElementById("diamond-amount").innerHTML = diamondCount;
     document.getElementById("diamond-amount").innerHTML = fluxCount;
 }
 
 
+document.getElementById("special").addEventListener("click", function () {
+    window.setInterval(addDiamond, 10000)
+})
+
+
+
 
 /*---------------------------------------------GAMBLING / TROVE OF WONDERS---------------------------------------------*/
 function gamble() {
-    diamondCount -= 10;
+    diamondCount -= gamblePrice;
     btnGamble.disabled = true;
 
-    if (diamondCount >= 10) {
+    if (diamondCount >= gamblePrice) {
         btnGamble.disabled = false;
     }
     document.getElementById("diamond-amount").innerHTML = diamondCount;
 
     chance = Math.floor(Math.random() * 1000 + 1)
 
-    if (chance === 1) {  // 0.1% CHANCE
+    if (chance === 1) { // 0.1% CHANCE
         alert("FIRST PRIZE!!! YOU WON 500 DIAMONDS")
         diamondCount += 500
-    }
-
-    else if (chance >= 2 && chance <= 101) {
+    } else if (chance >= 2 && chance <= 101) {
         alert("YOU WON 5,000 FLUX")
         fluxCount += 5000
         totalFlux += 5000
-    }
-
-    else {
+    } else {
         alert("you got nothing")
     }
 }
@@ -315,10 +318,8 @@ $(document).keydown(function () {
                 }
             })
             List = []
-        }
-        else {
+        } else {
             List = []
         }
     }
 })
-
