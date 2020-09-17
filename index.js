@@ -48,13 +48,10 @@ function getFlux() {
 
     /*----------Diamond Calculation----------*/
     let diamondChance = Math.floor(Math.random() * 150 + 1)
-
-    if (diamondUpgrade == 0) {
         if (diamondChance == 1) {
             diamondCount++
             document.getElementById("diamond-amount").innerHTML = diamondCount;
         }
-    }
 
 
     /*----------CLICK REWARD----------*/
@@ -109,7 +106,7 @@ function getFlux() {
 
     btnGamble.disabled = true;
 
-    if (diamondCount >= 10) {
+    if (diamondCount >= gamblePrice) {
         btnGamble.disabled = false;
     }
 
@@ -284,16 +281,18 @@ function gamble() {
     document.getElementById("diamond-amount").innerHTML = diamondCount;
 
     chance = Math.floor(Math.random() * 1000 + 1)
+    firstPrize = Math.floor(Math.random() * 5000 + 5000)
+    secondPrize = Math.floor(Math.random() * 900 + 100 )
 
     if (chance === 1) { // 0.1% CHANCE
-        alert("FIRST PRIZE!!! YOU WON 500 DIAMONDS")
-        diamondCount += 500
-    } else if (chance >= 2 && chance <= 101) {
-        alert("YOU WON 5,000 FLUX")
-        fluxCount += 5000
-        totalFlux += 5000
-    } else {
-        alert("you got nothing")
+        alert("FIRST PRIZE!!! YOU WON " + firstPrize + " FLUX")
+        fluxCount += firstPrize
+        totalFlux += firstPrize
+        
+    } else if (chance > 1) {
+        alert("YOU WON " + secondPrize + " FLUX")
+        fluxCount += secondPrize
+        totalFlux += secondPrize
     }
 }
 
