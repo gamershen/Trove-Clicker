@@ -15,10 +15,10 @@ var diamondUpgrade = 0
 
 /*----------PRICES----------*/
 const gamblePrice = 10
-const clickUpgrade1 = 20
-const clickUpgrade2 = 250
-const idleUpgrade1 = 50
-const idleUpgrade2 = 500
+const clickUpgrade1 = 50
+const clickUpgrade2 = 1000
+const idleUpgrade1 = 500
+const idleUpgrade2 = 2500
 const specialUpgrade = 20000
 
 /*----------BUTTONS----------*/
@@ -47,15 +47,15 @@ function getFlux() {
     document.getElementById("diamond-amount").innerHTML = diamondCount;
 
     /*----------Diamond Calculation----------*/
-    let diamondChance = Math.floor(Math.random() * 150 + 1)
-        if (diamondChance == 1) {
-            diamondCount++
-            document.getElementById("diamond-amount").innerHTML = diamondCount;
-        }
+    let diamondChance = Math.floor(Math.random() * 100 + 1)
+    if (diamondChance == 1) {
+        diamondCount++
+        document.getElementById("diamond-amount").innerHTML = diamondCount;
+    }
 
 
     /*----------CLICK REWARD----------*/
-    clickReward = Math.floor(clickSum / 100 * clickSum / 75 + totalFlux / 10)
+    clickReward = Math.floor(clickSum / 5 * (clickSum * 0.001) / 2)
 
     if (clickSum % 1000 == 0) {
         alert("you clicked " + clickSum + " times! you get bonus " + clickReward + " flux")
@@ -93,11 +93,12 @@ function getFlux() {
         }
     }
 
+
+
     /*----------SPECIAL BUTTON----------*/
     if (fluxCount >= specialUpgrade) {
         btnDiamond.disabled = false;
     }
-
 
 
 
@@ -110,6 +111,14 @@ function getFlux() {
         btnGamble.disabled = false;
     }
 
+
+
+
+
+    /*----------WINNING----------*/
+    if (fluxCount == 1000000) {
+        alert("you reach one million flux and won the game!\n thanks for playing")
+    }
 }
 
 
@@ -141,7 +150,7 @@ function clickUpgrade() {
     document.getElementById("flux-amount").innerHTML = fluxCount;
     document.getElementById("click-heading").innerHTML = "Mine Cinnabar";
     document.getElementById("click-reward").innerHTML = "+5 flux/click";
-    document.getElementById("click-price").innerHTML = "cost: 250 flux";
+    document.getElementById("click-price").innerHTML = "cost: 1000 flux";
 
 }
 
@@ -199,6 +208,12 @@ function idle() {
     if (diamondCount >= gamblePrice) {
         btnGamble.disabled = false;
     }
+
+
+    /*----------WINNING----------*/
+    if (fluxCount == 1000000) {
+        alert("you reach one million flux and won the game!\nthanks for playing")
+    }
 }
 
 document.getElementById("idle").addEventListener("click", function () {
@@ -229,7 +244,7 @@ function idleUpgrade() {
     idleLevel++
     btnIdle.disabled = true;
     document.getElementById("idle-reward").innerHTML = "5 flux/sec";
-    document.getElementById("idle-price").innerHTML = "cost: 500 flux";
+    document.getElementById("idle-price").innerHTML = "cost: 2500 flux";
 
 }
 
@@ -282,19 +297,20 @@ function gamble() {
 
     chance = Math.floor(Math.random() * 1000 + 1)
     firstPrize = Math.floor(Math.random() * 5000 + 5000)
-    secondPrize = Math.floor(Math.random() * 900 + 100 )
+    secondPrize = Math.floor(Math.random() * 900 + 100)
 
     if (chance === 1) { // 0.1% CHANCE
         alert("FIRST PRIZE!!! YOU WON " + firstPrize + " FLUX")
         fluxCount += firstPrize
         totalFlux += firstPrize
-        
+
     } else if (chance > 1) {
         alert("YOU WON " + secondPrize + " FLUX")
         fluxCount += secondPrize
         totalFlux += secondPrize
     }
 }
+
 
 
 
