@@ -165,6 +165,11 @@ function idle() {
     fluxCount += idleCount;
     totalFlux++
     document.getElementById("diamond-amount").innerHTML = diamondCount;
+    let diamondChance = Math.floor(Math.random() * 150 + 1)
+    if (diamondChance == 1) {
+        diamondCount++
+        document.getElementById("diamond-amount").innerHTML = diamondCount;
+    }
 
     /*----------IDLE BUTTON----------*/
     if (idleLevel == 0) {
