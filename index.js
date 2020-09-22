@@ -13,6 +13,8 @@ var diamondCount = 0
 var idleDiamond = 1
 var diamondUpgrade = 0
 
+var win = 0
+
 /*----------PRICES----------*/
 const gamblePrice = 10
 const clickUpgrade1 = 50
@@ -114,10 +116,10 @@ function getFlux() {
 
 
 
-
     /*----------WINNING----------*/
-    if (fluxCount == 1000000) {
-        alert("you reach one million flux and won the game!\n thanks for playing")
+    if (fluxCount >= 100000 && win == 0) {
+        alert("you reach 100,000 flux and won the game!\nthanks for playing")
+        win += 1
     }
 }
 
@@ -216,8 +218,9 @@ function idle() {
 
 
     /*----------WINNING----------*/
-    if (fluxCount == 1000000) {
-        alert("you reach one million flux and won the game!\nthanks for playing")
+    if (fluxCount >= 100000 && win == 0) {
+        alert("you reach 100,000 and won the game!\nthanks for playing")
+        win += 1
     }
 }
 
@@ -330,7 +333,7 @@ $(document).keydown(function () {
     }
 
     if (event.key == "Enter") {
-        if (List == "e,z,f,l,u,x") {
+        if (List == "7,7,7") {
             alert("CHEAT ACTIVATED\nyou can now hold space to click")
             $(document).keydown(function () {
                 if (event.key == " ") {
